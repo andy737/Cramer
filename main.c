@@ -87,18 +87,19 @@ void calcula(int dim, float ar[f][c])
     {
         printf("Solución al sistema de ecuaciones 3x3\n\n");
         delta=ar[0][0]*ar[1][1]*ar[2][2]+ar[0][1]*ar[1][2]*ar[2][0]+ar[0][2]*ar[1][0]*ar[2][1]-ar[0][2]*ar[1][1]*ar[2][0]-ar[0][1]*ar[1][0]*ar[2][2]-ar[0][0]*ar[1][2]*ar[2][1];
+		//Valida división por cero
 		if(delta!=0){
-		x=(ar[0][3]*ar[1][1]*ar[2][2]+ar[0][1]*ar[1][2]*ar[2][3]+ar[0][2]*ar[1][3]*ar[2][1]-ar[0][2]*ar[1][1]*ar[2][3]-ar[0][1]*ar[1][3]*ar[2][2]-ar[0][3]*ar[1][2]*ar[2][1])/delta;
-        y=(ar[0][0]*ar[1][3]*ar[2][2]+ar[0][3]*ar[1][2]*ar[2][0]+ar[0][2]*ar[1][0]*ar[2][3]-ar[0][2]*ar[1][3]*ar[2][0]-ar[0][3]*ar[1][0]*ar[2][2]-ar[0][0]*ar[1][2]*ar[2][3])/delta;
-        z=(ar[0][0]*ar[1][1]*ar[2][3]+ar[0][1]*ar[1][3]*ar[2][0]+ar[0][3]*ar[1][0]*ar[2][1]-ar[0][3]*ar[1][1]*ar[2][0]-ar[0][1]*ar[1][0]*ar[2][3]-ar[0][0]*ar[1][3]*ar[2][1])/delta;
-        //printf("\nd =  %.2f", delta);
-        printf("\nx =  %.2f", x);
-        printf("\ny =  %.2f", y);
-        printf("\nz =  %.2f", z);
+			x=(ar[0][3]*ar[1][1]*ar[2][2]+ar[0][1]*ar[1][2]*ar[2][3]+ar[0][2]*ar[1][3]*ar[2][1]-ar[0][2]*ar[1][1]*ar[2][3]-ar[0][1]*ar[1][3]*ar[2][2]-ar[0][3]*ar[1][2]*ar[2][1])/delta;
+			y=(ar[0][0]*ar[1][3]*ar[2][2]+ar[0][3]*ar[1][2]*ar[2][0]+ar[0][2]*ar[1][0]*ar[2][3]-ar[0][2]*ar[1][3]*ar[2][0]-ar[0][3]*ar[1][0]*ar[2][2]-ar[0][0]*ar[1][2]*ar[2][3])/delta;
+			z=(ar[0][0]*ar[1][1]*ar[2][3]+ar[0][1]*ar[1][3]*ar[2][0]+ar[0][3]*ar[1][0]*ar[2][1]-ar[0][3]*ar[1][1]*ar[2][0]-ar[0][1]*ar[1][0]*ar[2][3]-ar[0][0]*ar[1][3]*ar[2][1])/delta;
+			//printf("\nd =  %.2f", delta);
+			printf("\nx =  %.2f", x);
+			printf("\ny =  %.2f", y);
+			printf("\nz =  %.2f", z);
 		}
 		else{
 		
-		printf("\nEl sistema de ecucaciones no tiene solución.", x);
+		printf("\nEl sistema de ecucaciones no tiene solución.");
 		
 		}
         
