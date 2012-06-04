@@ -1,8 +1,7 @@
 # depslib dependency file v1.0
-1338317434 source:c:\users\andy737\desktop\cramer\main.c
+1338834330 source:c:\users\andy737\desktop\cramer\main.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 	<conio.h>
-	<ctype.h>
 
